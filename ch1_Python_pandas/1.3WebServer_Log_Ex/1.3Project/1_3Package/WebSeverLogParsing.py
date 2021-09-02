@@ -18,7 +18,7 @@ df = pd.DataFrame( parse_access_log( 'access.log' ), columns=columns )
 
 #시간을 보기쉽게 형식 변경
 df.time = pd.to_datetime( df.time, format='%d/%b/%Y:%X', exact=False )
-df.head( 5 )
+print( df.head( 5 ) )
 
 #데이터프레임을 csv파일로 저장
 file = '.\\access_log.csv'
